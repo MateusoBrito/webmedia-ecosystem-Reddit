@@ -1,0 +1,87 @@
+
+============================================================
+📌 CENÁRIO 1: Detoxify exagerou (Alto) / Perspective perdoou (Baixo)
+============================================================
+Exemplo 1:
+Texto: "cancel membership sign membership planet fitness move apartment free building cancel membership tell come person location sign order cancel move state tell another option send hand write letter signature send never receive correctly format something wrong time eventually call furiously demand membership cancel finally agree continue charge call back charge reason member call bank tell block planet fitness ever charge tell order must show proof cancel membership today still member planet fitness spend month without step planet fitness year almost fuck planet fitness"
+Nota Detoxify:   0.83
+Nota Perspective: 0.12
+----------------------------------------
+Exemplo 2:
+Texto: "call talk answer question edit knock reddit award want recognition wrong line work spend money literally anything else donate something need reddit gold edit first quit thread week wise move well hobby secondly clear thing parade people think catch something thing read half dozen place explain thread call landline address phone company know live landline move around much exception voip phone certain type business line give wrong address sometimes phone company incorrect record almost always question verify location actual location fully implement everywhere combination device network center capability support work location call mostly rely cellular network triangulation cell phone location information sometimes location really accurate within meter sometimes basically useless basically equivalent probably somewhere town maybe next sometimes take minute accurate location sometimes right away sometimes standard generally send officer verify address accurate within meter still ground search something like acre remember correctly include kind high rise office apartment shopping center mall parking garage call cell phone count able quickly trace phone especially type keep hang location datum call call back point supervisor need call cell provider ping phone whole time consuming process anyway back regularly schedule rant emergency really stress angry scared someone might otherwise danger maybe neighbor loud want rant complain vent want help perfectly understandable even hold call every mean name book long answer fucking question nothing much mildly annoy couple minute next time phone ring haunt something wrong could necessary information someone hurt help need would answer question every second spend jerk around intentionally otherwise waste time emergency emergency know sure sound like type know know phone work give address give intersection hell give name business stand front road tell help house listen question township tell name county breathe normally fuck sake literally life death tell know want hear hold check otherwise keep hound check trust would really rather next part either literally keep person alive onto question desperate answer question want answer need whole backstory beef neighbor right fucking make call come fast question think would rather right work arrive snore sound mean stop breathe normally agonal breathing damn death rattle holy fuck hang tell something reason outside argue knife weilde crackhead literally reason door lock stop argue dickhead boyfriend outside talk guess really emergency call anyway chase either able help butter cancel cancel cancel holy fuck think siri something sorry accident emergency know fuck send location suspicious activity female caller sound agitated keep repeat word cancel cooperative answer question phase area jesus chris quit pass phone around different people really need hear politic love hate thought trump relevant anything could possibly call aboutp"
+Nota Detoxify:   0.98
+Nota Perspective: 0.21
+----------------------------------------
+Exemplo 3:
+Texto: "attractive people romantically sexually attract attractive stop call shallow allow attract beautiful people interested interested average look people beautiful want give people obligation humor people attract beautiful thin young woman want alpha male bald sense fashion mean unworthy make thing exist judge worthiness human attract like everybody else would lust people attractive attractive people interested people find attractive nice girl perfect hourglass figure want want nice average deserve someone attractive attractive people take people want work become attractive attractive people want think attractive people nice look pure sheer luck gene nothing else meet shallow woman want instagram model yeah fuck beautiful partner also choose partner attract"
+Nota Detoxify:   0.81
+Nota Perspective: 0.40
+----------------------------------------
+Exemplo 4:
+Texto: "illegal printer company able electronically decide printer little might leave cartridge allow print decide quality want anymore print expended cartridge could damage head okay fine risk willing take sunday need print thing already know sell actual printer peanut make money whole printer full cartridge cost print important document work electronically prevent order goddam colour cartridge print black option conveniently eliminate high quality black colour come colour capitalism loss leader printer tactic maximize sale consumable company thing literally prevent product purchase stop product function need force shit fuck illegal like sensor determine need change disable contact certify change technician come location change void warranty electronically record thing agree continue print possibly damage head force accept agreement void warranty continue print fine keep fuck print fucking remain know fucking cartridge fuck edit address question really nice colour laser printer business toner toner printer even expensive think toner little printing feel printer year probably sufficient need much money spend toner would last year make much sense spend would long time course fill factory apparently aggressively cyan print colour black getcha override apparently next impossible override detect particular cartridge scour forum youtube video find trick printer printing unsuccessful model apparently allow refill cartridge either read barcode cartridge cartridge never able accord forum read bottom line sure well printer efficient printer sole function device perform task device decide perform task something device decide unusable absolute bullshit keurig coffee nonsense know brand work know brand work keurig decide little barcode licensing deal coffee company favourite coffee coffee maker nonsense"
+Nota Detoxify:   0.95
+Nota Perspective: 0.34
+----------------------------------------
+Exemplo 5:
+Texto: "angry people right shake today strong brave beautiful wife come home hospital work ward nurse tell story take patient know know personal basis outside wall hospital work transfer back city hospital come back cancer patient major surgery remove cancerous tumour abdomen recover enough able come hometown hospital look forward release spend time family sick covid catch hospital surgery transfer back city hospital need care probably come home fight hard cancer month endure incredibly invasive painful surgery smoke strong enough fight covid probably listen listen good fucking covid deny fuck tell wife tell tear foot push hall patient transfer tell scared back city scared alone tell fear break heart whole time damage irresponsible fuck cause refuse wear mask refuse keep distance refuse gather cause needless death like people like brave wife risk catch transmit family endless amount stress worry grow fuck political merry fucking christmas"
+Nota Detoxify:   1.00
+Nota Perspective: 0.21
+----------------------------------------
+
+============================================================
+📌 CENÁRIO 2: Perspective pegou o contexto (Alto) / Detoxify ignorou (Baixo)
+============================================================
+Exemplo 1:
+Texto: "jasmine crockett trump criminal never anyone sheet like president"
+Nota Detoxify:   0.08
+Nota Perspective: 0.60
+----------------------------------------
+Exemplo 2:
+Texto: "mada chod dost demotivate krdiya percentile main still prepare advanced somehow able solve almost previous year question physics chemistry today talk kota friend percentile mock even percentiler stress make chill take unnecessary pressure know reply keep silent call know keep think word"
+Nota Detoxify:   0.01
+Nota Perspective: 0.66
+----------------------------------------
+Exemplo 3:
+Texto: "parent stop allow child mini stripper ring card girl shopping centre today witness teen girl teen girl dress completely innapropriately range arse cheek skin tight clothing picture know counter argument beholder sexualise honestly part truth parent really need well stop daughter dress like part time stripper boundary place unpopular opinion well child dress like promiscuous adult parent cojone enforce edit unpopular expect actually encouraging ofcourse accuse perve underage girl honestly think problem live idealistic world grip teach daughter respect edit think someone attract underage girl notice dress completely inappropriately defence mechanism either defend parenting defend like dress really difficult individual liberty personal maternal paternal responsibility thing notice centralist agree left wing champagne socialist thing young teen allow walk around dressed like stripper"
+Nota Detoxify:   0.12
+Nota Perspective: 0.60
+----------------------------------------
+Exemplo 4:
+Texto: "term stupid exactly person colour dark consider world population group category simply white mean anything common technically every human earth pigment skin originate africa accord bill people colour people edit thing spicy love haha"
+Nota Detoxify:   0.30
+Nota Perspective: 0.60
+----------------------------------------
+Exemplo 5:
+Texto: "like make skit since always sound cringe exception"
+Nota Detoxify:   0.01
+Nota Perspective: 0.69
+----------------------------------------
+
+============================================================
+📌 CENÁRIO 3: Os dois modelos concordam (Ambos Altos)
+============================================================
+Exemplo 1:
+Texto: "trump cheat wife care family hell would care defend call criminal nazi shit"
+Nota Detoxify:   0.98
+Nota Perspective: 0.93
+----------------------------------------
+Exemplo 2:
+Texto: "back bitch"
+Nota Detoxify:   1.00
+Nota Perspective: 0.91
+----------------------------------------
+Exemplo 3:
+Texto: "fuck little bitch"
+Nota Detoxify:   1.00
+Nota Perspective: 0.96
+----------------------------------------
+Exemplo 4:
+Texto: "dirty thing petra slut produce luke"
+Nota Detoxify:   0.84
+Nota Perspective: 0.79
+----------------------------------------
+Exemplo 5:
+Texto: "fiona apple call grammys nominate tyson trax give support platform kesha fucking right need hear rape victim fuck hard change whole life self esteem appearance behave around friend family drink drink traumatic experience definitely change something able understand surprise lack support kesha generally sadly reflection world sexual assault rape victim general kesha also endure mental abuse point extreme pain look like also good selling girl multiple number undoubtedly career bury speak thing abuse victim understand abuse victim fact high possibility abuser walk free either afraid speak happen justice system fail even courage speak much time evidence rarely strong enough prove crime chance receive kind support luke suffer little consequence luke tyson trax make china abuse exist kesha exist charli kelly clarkson becky many even case harsh kesha still victim abuse point interest work important notice time kind deal sick person keep abuse woman face help keep career alive mattering listen support woman like song care still responsible much success face punishment despite multiple people could argue well barely receive money small amount directly pocket fact exactly small real contribution prove enough matter still able people listen music take career single wake rape victim part life part fiona apple life part kesha life choose support well know abuser keep work enable action victim life work important life ruin"
+Nota Detoxify:   0.82
+Nota Perspective: 0.73
+----------------------------------------

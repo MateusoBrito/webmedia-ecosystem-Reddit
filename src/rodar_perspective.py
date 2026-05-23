@@ -8,8 +8,8 @@ from concurrent.futures import ThreadPoolExecutor
 
 # --- CONFIGURAÇÕES DE ARQUIVO ---
 ARQUIVO_TOTAL = '../data/processed/preprocess_text.csv' 
-ARQUIVO_JA_PRONTO = '../data/processed/toxicidade_perspective_100k.csv'
-ARQUIVO_NOVO_PROGRESSO = '../data/processed/toxicidade_perspective_PROGRESSO.csv'
+ARQUIVO_JA_PRONTO = '../reports/toxicity/toxicidade_perspective_100k.csv'
+ARQUIVO_NOVO_PROGRESSO = '../reports/toxicity/toxicidade_perspective_PROGRESSO.csv'
 
 # Salva no disco a cada 300 posts (não afeta a barra visual, só a gravação do arquivo)
 SALVAR_A_CADA = 300 
@@ -21,7 +21,8 @@ CHAVES_API = [
     'AIzaSyDTrWe0Wti2T_SPPPVSiPnyDFsx_WyE1_Q',
     'AIzaSyBPt3HzQGwRmwuEAvhp2ZSVGpWcq-LfGOc',
     'AIzaSyBLK_NhWM1wMy9rwW2HVLwq_FXJI962xfc',
-    'AIzaSyB6CAS9pvCeN7YY4tc5O7z7KVc5xY4HLdU'
+    'AIzaSyB6CAS9pvCeN7YY4tc5O7z7KVc5xY4HLdU',
+    'AIzaSyBqKZWsxWqKfX6ocE7vkfZtYBV44XapBfo'
 ]
 
 WORKERS = len(CHAVES_API)

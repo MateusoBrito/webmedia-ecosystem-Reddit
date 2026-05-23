@@ -1,54 +1,67 @@
-#%%
-import pandas as pd
+from pathlib import Path
 import numpy as np
 import torch
-import re
-import os
+import argparse
 from sentence_transformers import SentenceTransformer
-from tqdm import tqdm
+from src.utils.data_loader import load_preprocessed_data
 
-def clean_for_embeddings(text):
-    # 1. Remove URLs (http, https, www)
-    text = re.sub(r'http\S+|www\.\S+', '', text)
-    # 2. Remove espaços extras e quebras de linha
-    text = re.sub(r'\s+', ' ', text).strip()
+def run_embeddings(
+    root=None,
+    output_path=None,
+    model_name="paraphrase-multilingual-MiniLM-L12-v2",
+    batch_size=128
+):
+    if root is None:
+        root = Path(__file__).resolve().parents[1]
     
-    return text
+    dir_path = root / "artifacts" / "embeddings"
+    if output_path is None:
+        output_path = dir_path / "embeddings_posts.npz"
 
-DIR = "../data/processed/"
-INPUT_PATH = DIR+"concatenated_title_selftext.csv"
-OUTPUT_PATH = DIR+"embeddings_posts.npy"
-MODEL_NAME = 'paraphrase-multilingual-MiniLM-L12-v2'
-BATCH_SIZE = 128
+    dir_path.mkdir(parents=True, exist_ok=True)
 
-def run_embeddings(input_path = INPUT_PATH,
-                   output_path = OUTPUT_PATH,
-                   model_name = MODEL_NAME,
-                   batch_size = BATCH_SIZE):
-    
-    print("Carregando DataFrame...")
-    df = pd.read_csv(input_path)
-    df['text'] = df['text'].fillna("").apply(clean_for_embeddings)
-    df.to_parquet(DIR+"text_to_embeddings.parquet", index=False)
-    sentences = df['text'].tolist()
+    if output_path.exists():
+        print("Embeddings já existem. Pulando execução.")
+        return
+
+    df = load_preprocessed_data()
+    sentences = df["text_clean"].tolist()
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"Usando dispositivo: {device}")
-    
+
     model = SentenceTransformer(model_name, device=device)
 
-    print(f"Iniciando cálculo de embeddings para {len(sentences)} posts...")
+    print(f"Processando {len(sentences)} textos...")
+
     embeddings = model.encode(
-        sentences, 
-        batch_size=batch_size, 
-        show_progress_bar=True, 
+        sentences,
+        batch_size=batch_size,
+        show_progress_bar=True,
         convert_to_numpy=True
     )
 
-    # 5. Salvar Resultados
-    print(f"Salvando embeddings em: {output_path}")
-    np.save(output_path, embeddings)
-    print("Concluído com sucesso!")
+    print(f"Salvando em {output_path}")
+    np.savez(
+        output_path,
+        embeddings=embeddings,
+        ids=df["id"].values
+    )
+
+    print("Concluído!")
+
 
 if __name__ == "__main__":
-    run_embeddings()
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("--output", type=str, required=True)
+    parser.add_argument("--model", type=str, default="paraphrase-multilingual-MiniLM-L12-v2")
+    parser.add_argument("--batch_size", type=int, default=128)
+
+    args = parser.parse_args()
+
+    run_embeddings(
+        output_path=Path(args.output),
+        model_name=args.model,
+        batch_size=args.batch_size
+    )

@@ -1,5 +1,7 @@
-venv
-data
-reports/*.csv
+venv/
+data/
+reports/
+artifacts/
 *.graphml
-db2
+db2/
+reddit_limpo.tar.gz

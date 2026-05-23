@@ -90,7 +90,7 @@ def run_classificacao(df, checkpoint_path):
     print(f"\nProcessamento concluído. Resultados salvos em: {checkpoint_path}")
 
 if __name__ == "__main__":
-    OUTPUT = "../reports/lang_detection.csv"
+    OUTPUT = "../data/processed/lang_detection.csv"
     
     df = read_dataset()
     df = filter_df(df, OUTPUT)

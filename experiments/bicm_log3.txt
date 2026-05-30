@@ -1,0 +1,78 @@
+Posts carregados: 1736102
+Antes dos filtros: 991,230 autores, 7,341 subreddits
+Iteração 1: removidos 1,533,447 registros → 34,095 autores, 3,299 subreddits
+Iteração 2: removidos 68,016 registros → 19,340 autores, 2,092 subreddits
+Iteração 3: removidos 37,890 registros → 12,172 autores, 1,401 subreddits
+Iteração 4: removidos 24,582 registros → 8,102 autores, 961 subreddits
+Iteração 5: removidos 16,911 registros → 5,579 autores, 672 subreddits
+Iteração 6: removidos 9,938 registros → 4,056 autores, 520 subreddits
+Iteração 7: removidos 6,789 registros → 3,220 autores, 429 subreddits
+Iteração 8: removidos 3,936 registros → 2,787 autores, 377 subreddits
+Iteração 9: removidos 2,891 registros → 2,487 autores, 340 subreddits
+Iteração 10: removidos 2,220 registros → 2,277 autores, 319 subreddits
+Iteração 11: removidos 1,529 registros → 2,170 autores, 302 subreddits
+Iteração 12: removidos 1,515 registros → 2,062 autores, 283 subreddits
+Iteração 13: removidos 1,308 registros → 1,966 autores, 266 subreddits
+Iteração 14: removidos 1,557 registros → 1,861 autores, 246 subreddits
+Iteração 15: removidos 937 registros → 1,744 autores, 237 subreddits
+Iteração 16: removidos 719 registros → 1,702 autores, 231 subreddits
+Iteração 17: removidos 317 registros → 1,674 autores, 229 subreddits
+Iteração 18: removidos 20 registros → 1,666 autores, 229 subreddits
+Iteração 19: removidos 0 registros → 1,666 autores, 229 subreddits
+Rede estabilizou.
+Edgelist: 8,890 pares
+============================================================
+DIAGNÓSTICO DA REDE BIPARTIDA
+============================================================
+
+Nós: 1666 usuários | 229 subreddits
+Arestas: 8,890
+Densidade: 0.023302
+
+Usuários por subreddit:
+count    229.000000
+mean      38.820961
+std       15.643739
+min       20.000000
+25%       26.000000
+50%       35.000000
+75%       50.000000
+max       90.000000
+
+Subreddits por usuário:
+count    1666.000000
+mean        5.336134
+std         4.276324
+min         3.000000
+25%         3.000000
+50%         4.000000
+75%         6.000000
+max        48.000000
+
+Calculando overlaps entre pares de subreddits...
+Pares com overlap > 0: 6,804 / 19,900 (34.2%)
+Distribuição dos overlaps (onde > 0):
+count    6804.000000
+mean        3.533804
+std         3.212939
+min         1.000000
+25%         1.000000
+50%         3.000000
+75%         5.000000
+max        33.000000
+
+Overlap >= 2: 4,800 pares
+Overlap >= 5: 1,728 pares
+Overlap >= 10: 362 pares
+============================================================
+solve_bicm has been deprecated, calling solve_tool instead
+max rows error = 1.8597948070464554e-07
+max columns error = 3.330093534259504e-09
+total error = 8.06094227812082e-07
+Solver converged.
+No V-motifs will be validated. Try increasing alpha
+
+Arestas validadas (BiCM + FDR α=0.1): 0
+Grafo: 0 nós, 0 arestas
+
+Grafo salvo com sucesso em: /home/mateus/reddit/data/processed/graph_bicm.graphml

@@ -6,7 +6,7 @@ import numpy as np
 from bertopic import BERTopic
 from bertopic.vectorizers import ClassTfidfTransformer
 from umap import UMAP
-from hdbscan import HDBSCAN
+from sklearn.cluster import KMeans
 
 from src.utils.data_loader import load_preprocessed_data, load_centroid_data
 from src.utils.paths import ROOT
@@ -18,13 +18,16 @@ def prepare_data():
     """
     print("1. Carregando e alinhando dados do centróide e posts...")
     
-    # 1. Carregar centroides
+    # 1. Carregar textos
+    df_text = load_preprocessed_data()
+    df_text = df_text[df_text["depth"] == 0]
+    valid_subreddits = set(df_text["subreddit"].unique())
+
+    # 2. Carregar centroides
     df_centroids = load_centroid_data()
+    df_centroids = df_centroids.loc[df_centroids.index.isin(valid_subreddits)]
     centroids_matrix = df_centroids.values
     subreddit_names = df_centroids.index.tolist()
-
-    # 2. Carregar textos
-    df_text = load_preprocessed_data()
 
     # 3. Agrupar os textos no nível da comunidade
     docs_per_subreddit = df_text.groupby('subreddit')['text_clean'].agg(lambda x: ' '.join(x)).reset_index()
@@ -39,11 +42,8 @@ def prepare_data():
     return documents, centroids_matrix, subreddit_names
 
 
-def train_topic_model(documents: List[str], centroids_matrix: np.ndarray):
-    """
-    Configura as arquiteturas (UMAP, HDBSCAN) e treina o modelo BERTopic.
-    """
-    print("2. Treinando BERTopic (UMAP + HDBSCAN + c-TF-IDF)...")
+def train_topic_model(documents: List[str], centroids_matrix: np.ndarray, n_clusters: int = 10):
+    print("2. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...")
     
     umap_model = UMAP(
         n_neighbors=50,
@@ -53,16 +53,15 @@ def train_topic_model(documents: List[str], centroids_matrix: np.ndarray):
         random_state=42
     )
 
-    hdbscan_model = HDBSCAN(
-        min_cluster_size=50, 
-        min_samples=1, 
-        metric='euclidean', 
-        cluster_selection_method='leaf'
+    kmeans_model = KMeans(
+        n_clusters=n_clusters,
+        random_state=42,
+        n_init="auto"
     )
 
     topic_model = BERTopic(
         umap_model=umap_model,
-        hdbscan_model=hdbscan_model,
+        hdbscan_model=kmeans_model,  
         ctfidf_model=ClassTfidfTransformer(),
         verbose=True
     )

@@ -67,12 +67,6 @@ python3 -m src.topic_modeling
 
 ```
 
-Aqui está a seção final para você adicionar ao final do seu `README.md`.
-
-Como a modelagem de tópicos (BERTopic/HDBSCAN) é um aprendizado não supervisionado, nós não usamos o tradicional `GridSearchCV` do *scikit-learn* (pois não temos uma variável "Y" para prever). Em vez disso, montamos uma busca customizada avaliando a **qualidade e separação espacial dos clusters**, usando métricas como o *Silhouette Score*.
-
-Basta copiar o bloco abaixo e colar no final do seu arquivo da documentação:
-
 ## 🚀 Próximos Passos: Ajuste Fino (Hyperparameter Tuning)
 
 O modelo atual utiliza parâmetros fixos como pontos de partida (ex: `n_neighbors=50` e `min_cluster_size=50`). No entanto, para separarmos os subreddits em clusters bem definidos e separados surge a necessidade de ajustar esses parâmetros, testando diversas combinações.

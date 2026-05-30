@@ -1,0 +1,13 @@
+Posts carregados: 1736102
+Edgelist: 333,082 pares
+solve_bicm has been deprecated, calling solve_tool instead
+max rows error = 1.064108801074326e-10
+max columns error = 6.252776074688882e-13
+total error = 1.3574008583816521e-10
+Solver converged.
+No V-motifs will be validated. Try increasing alpha
+
+Arestas validadas (BiCM + FDR α=0.1): 0
+Grafo: 0 nós, 0 arestas
+
+Grafo salvo com sucesso em: /home/mateus/reddit/data/processed/graph_bicm.graphml

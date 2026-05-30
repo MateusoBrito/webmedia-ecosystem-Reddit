@@ -2,21 +2,24 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 import argparse
+from numpy.linalg import norm
 from src.utils.data_loader import load_preprocessed_data
-
 
 def load_data(input_embeddings):
     print("Carregando dados...")
-
     df = load_preprocessed_data()
 
     data = np.load(input_embeddings, allow_pickle=True)
     embeddings = data["embeddings"]
+    ids = data["ids"] 
+    
+    id_to_idx = {id_: i for i, id_ in enumerate(ids)}
+    df = df.set_index("id").loc[ids].reset_index()
 
-    assert len(df) == embeddings.shape[0], "Mismatch entre df e embeddings!"
+    if len(df) != embeddings.shape[0]:
+        raise ValueError(f"Mismatch: df tem {len(df)} linhas, embeddings tem {embeddings.shape[0]}")
 
     return df, embeddings
-
 
 def compute_centroids(df, embeddings):
     df = df.reset_index(drop=True)
@@ -26,7 +29,8 @@ def compute_centroids(df, embeddings):
 
     for sub, idx in groups.items():
         vecs = embeddings[idx]
-        centroids[sub] = vecs.mean(axis=0)
+        c = vecs.mean(axis=0)
+        centroids[sub] = c / norm(c) 
 
     return centroids
 

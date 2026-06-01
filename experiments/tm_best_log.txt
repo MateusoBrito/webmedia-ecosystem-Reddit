@@ -1,0 +1,97 @@
+1. Carregando posts de profundidade 0...
+   -> 238856 posts | 998 subreddits
+2. Gerando embeddings...
+   -> Carregando da cache: /home/mateus/reddit/artifacts/embeddings/embeddings_topic_modeling.npy
+Grid search BERTopic...
+   -> 30 combinações
+   -> 30 combinações já concluídas, retomando...
+[1/30] Pulando {'n_clusters': 5, 'n_neighbors': 15, 'n_components': 3}
+[2/30] Pulando {'n_clusters': 5, 'n_neighbors': 15, 'n_components': 5}
+[3/30] Pulando {'n_clusters': 5, 'n_neighbors': 30, 'n_components': 3}
+[4/30] Pulando {'n_clusters': 5, 'n_neighbors': 30, 'n_components': 5}
+[5/30] Pulando {'n_clusters': 5, 'n_neighbors': 50, 'n_components': 3}
+[6/30] Pulando {'n_clusters': 5, 'n_neighbors': 50, 'n_components': 5}
+[7/30] Pulando {'n_clusters': 10, 'n_neighbors': 15, 'n_components': 3}
+[8/30] Pulando {'n_clusters': 10, 'n_neighbors': 15, 'n_components': 5}
+[9/30] Pulando {'n_clusters': 10, 'n_neighbors': 30, 'n_components': 3}
+[10/30] Pulando {'n_clusters': 10, 'n_neighbors': 30, 'n_components': 5}
+[11/30] Pulando {'n_clusters': 10, 'n_neighbors': 50, 'n_components': 3}
+[12/30] Pulando {'n_clusters': 10, 'n_neighbors': 50, 'n_components': 5}
+[13/30] Pulando {'n_clusters': 15, 'n_neighbors': 15, 'n_components': 3}
+[14/30] Pulando {'n_clusters': 15, 'n_neighbors': 15, 'n_components': 5}
+[15/30] Pulando {'n_clusters': 15, 'n_neighbors': 30, 'n_components': 3}
+[16/30] Pulando {'n_clusters': 15, 'n_neighbors': 30, 'n_components': 5}
+[17/30] Pulando {'n_clusters': 15, 'n_neighbors': 50, 'n_components': 3}
+[18/30] Pulando {'n_clusters': 15, 'n_neighbors': 50, 'n_components': 5}
+[19/30] Pulando {'n_clusters': 20, 'n_neighbors': 15, 'n_components': 3}
+[20/30] Pulando {'n_clusters': 20, 'n_neighbors': 15, 'n_components': 5}
+[21/30] Pulando {'n_clusters': 20, 'n_neighbors': 30, 'n_components': 3}
+[22/30] Pulando {'n_clusters': 20, 'n_neighbors': 30, 'n_components': 5}
+[23/30] Pulando {'n_clusters': 20, 'n_neighbors': 50, 'n_components': 3}
+[24/30] Pulando {'n_clusters': 20, 'n_neighbors': 50, 'n_components': 5}
+[25/30] Pulando {'n_clusters': 30, 'n_neighbors': 15, 'n_components': 3}
+[26/30] Pulando {'n_clusters': 30, 'n_neighbors': 15, 'n_components': 5}
+[27/30] Pulando {'n_clusters': 30, 'n_neighbors': 30, 'n_components': 3}
+[28/30] Pulando {'n_clusters': 30, 'n_neighbors': 30, 'n_components': 5}
+[29/30] Pulando {'n_clusters': 30, 'n_neighbors': 50, 'n_components': 3}
+[30/30] Pulando {'n_clusters': 30, 'n_neighbors': 50, 'n_components': 5}
+
+==================================================
+Rodando: best_silhouette
+   -> Params: {'n_clusters': 5, 'n_neighbors': 30, 'n_components': 3}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0440
+   -> Diversidade: 0.5600
+   -> Coerência (c_v): 0.4633
+3. Exportando Dicionário de Tópicos...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling/best_silhouette
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling/best_silhouette
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling/best_silhouette
+
+==================================================
+Rodando: best_diversity
+   -> Params: {'n_clusters': 15, 'n_neighbors': 15, 'n_components': 3}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: -0.0209
+   -> Diversidade: 0.6733
+   -> Coerência (c_v): 0.4385
+3. Exportando Dicionário de Tópicos...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling/best_diversity
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling/best_diversity
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling/best_diversity
+
+==================================================
+Rodando: best_coherence
+   -> Params: {'n_clusters': 15, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0060
+   -> Diversidade: 0.5533
+   -> Coerência (c_v): 0.5709
+3. Exportando Dicionário de Tópicos...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling/best_coherence
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling/best_coherence
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling/best_coherence
+
+==================================================
+Rodando: best_combined
+   -> Params: {'n_clusters': 20, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0091
+   -> Diversidade: 0.7550
+   -> Coerência (c_v): 0.5262
+3. Exportando Dicionário de Tópicos...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling/best_combined
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling/best_combined
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling/best_combined

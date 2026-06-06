@@ -89,3 +89,16 @@ def load_raw_data(
     print(f"Posts carregados: {len(df)}")
 
     return df
+
+def load_ranking_subreddits():
+    """
+        Carrega o ranking de subreddits mais misóginos da depth 0.
+    """
+    df = pd.read_parquet(DATA_PROCESSED / "ranking_subreddits.parquet")
+    df['subreddit'] = df['subreddit'].str.replace('r/', '', regex=False)
+    df['subreddit'] = df['subreddit'].str.lower()
+    return df
+
+def load_toxicity():
+    df = pd.read_csv(DATA_PROCESSED / "toxicidade_perspective_COMPLETO.csv")
+    return df

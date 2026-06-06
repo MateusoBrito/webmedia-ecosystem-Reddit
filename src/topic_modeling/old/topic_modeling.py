@@ -20,24 +20,34 @@ from gensim.corpora.dictionary import Dictionary
 from src.utils.data_loader import load_preprocessed_data
 from src.utils.paths import ROOT
 
-def load_stopwords(path: Path) -> set:
+DIR_REPORTS = ROOT / "reports" / "topic_modeling2"
+CACHE_EMBEDDINGS = ROOT / "artifacts" / "embeddings" / "embeddings_topic_modeling_all_mini.npy"
+STOPWORDS_PATH = ROOT / "data" / "processed" /"stopwords.txt"
+
+
+def load_stopwords(path: Path = STOPWORDS_PATH) -> set:
     with open(path, "r") as f:
         return set(line.strip() for line in f if line.strip())
 
 def prepare_data():
     print("1. Carregando posts de profundidade 0...")
 
-    df = load_preprocessed_data()
-    df = df[df["depth"] == 0].reset_index(drop=True)
+    df_full = load_preprocessed_data()
+    df_full = df_full[df_full["depth"] == 0].reset_index(drop=True)
 
-    print(f"   -> {len(df)} posts | {df['subreddit'].nunique()} subreddits")
+    print(f"   -> Dataset completo: {len(df_full)} posts | {df_full['subreddit'].nunique()} subreddits")
 
-    documents = df["text_clean"].tolist()
-    return documents, df
+    # Remove duplicatas para o treinamento do BERTopic
+    df_unique = df_full.groupby(by="text_clean").aggregate("id")
+    print(f"   -> Textos ÚNICOS para treinamento: {len(df_unique)}")
+
+    documents_unique = df_unique["text_clean"].tolist()
+    
+    return documents_unique, df_unique
 
 def generate_embeddings(
     documents: List[str],
-    cache_path: Path,
+    cache_path: Path = CACHE_EMBEDDINGS,
     model_name: str = "all-MiniLM-L6-v2"
 ) -> np.ndarray:
     print("2. Gerando embeddings...")
@@ -115,10 +125,14 @@ def evaluate_model(
     print(f"   -> Silhoueta: {silhouette:.4f}")
 
     # --- Diversidade ---
-    topic_words = [
-        [word for word, _ in topic_model.get_topic(t)]
-        for t in set(topics) if t != -1
-    ]
+    topic_words = []
+    for t in set(topics):
+        if t == -1:
+            continue
+        words = topic_model.get_topic(t)
+        if not words:
+            continue
+        topic_words.append([word for word, _ in words])
     all_words = [word for words in topic_words for word in words]
     diversity = len(set(all_words)) / len(all_words) if all_words else 0.0
     print(f"   -> Diversidade: {diversity:.4f}")
@@ -141,8 +155,6 @@ def evaluate_model(
         "diversity": round(diversity, 4),
         "coherence_cv": round(coherence, 4),
     }
-
-from itertools import product
 
 def grid_search(
     documents: List[str],
@@ -325,10 +337,6 @@ def run_best_models(
         print(f"   -> Salvo em: {model_dir}")
 
 def main():
-    DIR_REPORTS = ROOT / "reports" / "topic_modeling2"
-    CACHE_EMBEDDINGS = ROOT / "artifacts" / "embeddings" / "embeddings_topic_modeling_all_mini.npy"
-    STOPWORDS_PATH = ROOT / "data" / "processed" /"stopwords.txt"
-
     stopwords = load_stopwords(STOPWORDS_PATH)
     documents, df = prepare_data()
     embeddings = generate_embeddings(documents, cache_path=CACHE_EMBEDDINGS)

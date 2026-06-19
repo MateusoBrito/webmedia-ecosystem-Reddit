@@ -124,10 +124,19 @@ print(df_clean['topic'].value_counts())
 print(df_clean['kw_faixa'].value_counts())
 
 #%%
+# Distribuição de topics por faixa de n_keywords
+df_clean['kw_faixa'] = pd.cut(df_clean['n_keywords'], 
+                              bins=[0, 20, 40, 60], 
+                              labels=['baixo (1-20)', 'médio (21-40)', 'alto (41-60)'])
+
+print(df_clean['topic'].value_counts())
+print(df_clean['kw_faixa'].value_counts())
+
+#%%
 df_clean_full = df_clean.copy() 
 df_clean_full['kw_faixa'] = pd.cut(df_clean_full['n_keywords'],
-                                    bins=[0, 15, 30, 45, 60],
-                                    labels=['baixo (1-15)', 'médio (16-30)', 'alto (31-45)', 'muito alto (46-60)'])
+                                   bins=[0, 20, 40, 60],
+                                   labels=['baixo (1-20)', 'médio (21-40)', 'alto (41-60)'])
 
 # ── 1. PROPORÇÃO DE TOPICS POR FAIXA ─────────────────────────────────────────
 topic_faixa = (
@@ -166,7 +175,8 @@ plt.savefig('topic_keywords_toxicidade.png', dpi=150, bbox_inches='tight')
 plt.show()
 
 # ── RESUMO: qual topic cresce mais nas faixas altas? ─────────────────────────
-pivot_norm['variacao'] = pivot_norm['muito alto (46-60)'] - pivot_norm['baixo (1-15)']
+# ATUALIZADO: Calculando a variação entre a nova faixa alta (41-60) e a baixa (1-20)
+pivot_norm['variacao'] = pivot_norm['alto (41-60)'] - pivot_norm['baixo (1-20)']
 print("\nTopics que mais crescem nas faixas altas de keywords:")
 print(pivot_norm['variacao'].sort_values(ascending=False))
-# %%
+#%%

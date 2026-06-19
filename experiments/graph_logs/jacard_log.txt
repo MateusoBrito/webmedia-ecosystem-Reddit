@@ -1,0 +1,6 @@
+
+Construindo a rede baseada em co-ocorrência (mínimo de 3 autores)...
+Arestas criadas (Overlaps >= 3): 65
+Grafo Final: 61 nós, 65 arestas
+
+Grafo salvo com sucesso em: /home/mateus/reddit/data/processed/graph_heuristic.graphml

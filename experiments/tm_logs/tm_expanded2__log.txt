@@ -1,0 +1,117 @@
+Carregando configurações de: /home/mateus/reddit/configs/config_tm_expanded2.yaml
+1. Carregando posts...
+   -> 427 subreddits carregados
+   -> Dataset completo: 108978 posts
+   -> Textos ÚNICOS para treinamento: 105447
+2. Gerando embeddings...
+   -> Carregando da cache: /home/mateus/reddit/artifacts/embeddings/embeddings_topic_modeling_expanded_all_mini.npy
+Grid search BERTopic...
+   -> 27 combinações
+
+[1/27] {'n_clusters': 5, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0115
+   -> Diversidade: 0.8600
+   -> Coerência (c_v): 0.5486
+
+[2/27] {'n_clusters': 5, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0192
+   -> Diversidade: 0.9200
+   -> Coerência (c_v): 0.5403
+
+[3/27] {'n_clusters': 5, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0196
+   -> Diversidade: 0.9200
+   -> Coerência (c_v): 0.5392
+
+[4/27] {'n_clusters': 7, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0097
+   -> Diversidade: 0.8571
+   -> Coerência (c_v): 0.5487
+
+[5/27] {'n_clusters': 7, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0175
+   -> Diversidade: 0.8571
+   -> Coerência (c_v): 0.5088
+
+[6/27] {'n_clusters': 7, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0120
+   -> Diversidade: 0.8571
+   -> Coerência (c_v): 0.5335
+
+[7/27] {'n_clusters': 10, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0091
+   -> Diversidade: 0.8800
+   -> Coerência (c_v): 0.5541
+
+[8/27] {'n_clusters': 10, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0102
+   -> Diversidade: 0.8900
+   -> Coerência (c_v): 0.5503
+
+[9/27] {'n_clusters': 10, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0135
+   -> Diversidade: 0.9100
+   -> Coerência (c_v): 0.5638
+
+[10/27] {'n_clusters': 12, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0097
+   -> Diversidade: 0.8833
+   -> Coerência (c_v): 0.5708
+
+[11/27] {'n_clusters': 12, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0092
+   -> Diversidade: 0.8833
+   -> Coerência (c_v): 0.5548
+
+[12/27] {'n_clusters': 12, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[13/27] {'n_clusters': 15, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[14/27] {'n_clusters': 15, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[15/27] {'n_clusters': 15, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[16/27] {'n_clusters': 18, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[17/27] {'n_clusters': 18, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[18/27] {'n_clusters': 18, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[19/27] {'n_clusters': 20, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTo

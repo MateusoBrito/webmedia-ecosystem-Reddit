@@ -1,0 +1,523 @@
+Carregando configurações de: /home/mateus/reddit/configs/config_tm_expanded6.yaml
+1. Carregando posts...
+   -> Dataset da Rede Expandida (Zonas de Contágio) carregado.
+   -> Foram encontrados 41247 posts provenientes de 158 subreddits periféricos.
+   -> Dataset completo: 41247 posts
+   -> Textos ÚNICOS para treinamento: 40437
+2. Gerando embeddings...
+   -> Dispositivo: cuda
+   -> Cache salva em: /home/mateus/reddit/artifacts/embeddings/embeddings_topic_modeling_expanded_contra_all_mini.npy
+Grid search BERTopic...
+   -> 27 combinações
+
+[1/27] {'n_clusters': 5, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0152
+   -> Diversidade: 0.8400
+   -> Coerência (c_v): 0.5516
+
+[2/27] {'n_clusters': 5, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0150
+   -> Diversidade: 0.8400
+   -> Coerência (c_v): 0.5655
+
+[3/27] {'n_clusters': 5, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0189
+   -> Diversidade: 0.8800
+   -> Coerência (c_v): 0.5414
+
+[4/27] {'n_clusters': 7, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0178
+   -> Diversidade: 0.8429
+   -> Coerência (c_v): 0.5228
+
+[5/27] {'n_clusters': 7, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0183
+   -> Diversidade: 0.8286
+   -> Coerência (c_v): 0.5316
+
+[6/27] {'n_clusters': 7, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0140
+   -> Diversidade: 0.7857
+   -> Coerência (c_v): 0.5140
+
+[7/27] {'n_clusters': 10, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0155
+   -> Diversidade: 0.8800
+   -> Coerência (c_v): 0.5686
+
+[8/27] {'n_clusters': 10, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0205
+   -> Diversidade: 0.8900
+   -> Coerência (c_v): 0.5145
+
+[9/27] {'n_clusters': 10, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0179
+   -> Diversidade: 0.8400
+   -> Coerência (c_v): 0.5663
+
+[10/27] {'n_clusters': 12, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0170
+   -> Diversidade: 0.9083
+   -> Coerência (c_v): 0.6181
+
+[11/27] {'n_clusters': 12, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0176
+   -> Diversidade: 0.8667
+   -> Coerência (c_v): 0.5244
+
+[12/27] {'n_clusters': 12, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0154
+   -> Diversidade: 0.8667
+   -> Coerência (c_v): 0.5814
+
+[13/27] {'n_clusters': 15, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0167
+   -> Diversidade: 0.9000
+   -> Coerência (c_v): 0.5999
+
+[14/27] {'n_clusters': 15, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0185
+   -> Diversidade: 0.9000
+   -> Coerência (c_v): 0.5683
+
+[15/27] {'n_clusters': 15, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0165
+   -> Diversidade: 0.8667
+   -> Coerência (c_v): 0.5271
+
+[16/27] {'n_clusters': 18, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0190
+   -> Diversidade: 0.9167
+   -> Coerência (c_v): 0.5784
+
+[17/27] {'n_clusters': 18, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0140
+   -> Diversidade: 0.8833
+   -> Coerência (c_v): 0.5583
+
+[18/27] {'n_clusters': 18, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0182
+   -> Diversidade: 0.8889
+   -> Coerência (c_v): 0.5469
+
+[19/27] {'n_clusters': 20, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0160
+   -> Diversidade: 0.9150
+   -> Coerência (c_v): 0.5906
+
+[20/27] {'n_clusters': 20, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0148
+   -> Diversidade: 0.8850
+   -> Coerência (c_v): 0.5530
+
+[21/27] {'n_clusters': 20, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0177
+   -> Diversidade: 0.9100
+   -> Coerência (c_v): 0.5866
+
+[22/27] {'n_clusters': 22, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0120
+   -> Diversidade: 0.8818
+   -> Coerência (c_v): 0.5934
+
+[23/27] {'n_clusters': 22, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0123
+   -> Diversidade: 0.8864
+   -> Coerência (c_v): 0.6230
+
+[24/27] {'n_clusters': 22, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0101
+   -> Diversidade: 0.8818
+   -> Coerência (c_v): 0.5752
+
+[25/27] {'n_clusters': 25, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0092
+   -> Diversidade: 0.8560
+   -> Coerência (c_v): 0.5965
+
+[26/27] {'n_clusters': 25, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0129
+   -> Diversidade: 0.8760
+   -> Coerência (c_v): 0.6179
+
+[27/27] {'n_clusters': 25, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0121
+   -> Diversidade: 0.8720
+   -> Coerência (c_v): 0.5680
+
+Filtro Inteligente: 12 treinamentos cobrirão 25 rankings.
+
+============================================================
+[1/12] Treinando config: Clusters=10 | UMAP=50
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+
+============================================================
+-> Este modelo será salvo nas seguintes pastas:
+   - best_silhouette_rank1
+============================================================
+2. Avaliando modelo...
+   -> Silhoueta: 0.0205
+   -> Diversidade: 0.8900
+   -> Coerência (c_v): 0.5145
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank1
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank1
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank1
+
+============================================================
+[2/12] Treinando config: Clusters=18 | UMAP=30
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+
+============================================================
+-> Este modelo será salvo nas seguintes pastas:
+   - best_silhouette_rank2
+   - best_diversity_rank1
+   - best_combined_sdc_rank2
+   - best_combined_sc_rank2
+============================================================
+2. Avaliando modelo...
+   -> Silhoueta: 0.0190
+   -> Diversidade: 0.9167
+   -> Coerência (c_v): 0.5784
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank2
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank2
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank2
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank1
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank1
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank1
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank2
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank2
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank2
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank2
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank2
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank2
+
+============================================================
+[3/12] Treinando config: Clusters=5 | UMAP=100
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+
+============================================================
+-> Este modelo será salvo nas seguintes pastas:
+   - best_silhouette_rank3
+============================================================
+2. Avaliando modelo...
+   -> Silhoueta: 0.0189
+   -> Diversidade: 0.8800
+   -> Coerência (c_v): 0.5414
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank3
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank3
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank3
+
+============================================================
+[4/12] Treinando config: Clusters=15 | UMAP=50
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+
+============================================================
+-> Este modelo será salvo nas seguintes pastas:
+   - best_silhouette_rank4
+   - best_combined_sc_rank5
+============================================================
+2. Avaliando modelo...
+   -> Silhoueta: 0.0185
+   -> Diversidade: 0.9000
+   -> Coerência (c_v): 0.5683
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank4
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank4
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank4
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank5
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank5
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank5
+
+============================================================
+[5/12] Treinando config: Clusters=7 | UMAP=50
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+
+============================================================
+-> Este modelo será salvo nas seguintes pastas:
+   - best_silhouette_rank5
+============================================================
+2. Avaliando modelo...
+   -> Silhoueta: 0.0183
+   -> Diversidade: 0.8286
+   -> Coerência (c_v): 0.5316
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank5
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank5
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_silhouette_rank5
+
+============================================================
+[6/12] Treinando config: Clusters=20 | UMAP=30
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+
+============================================================
+-> Este modelo será salvo nas seguintes pastas:
+   - best_diversity_rank2
+   - best_combined_sdc_rank5
+============================================================
+2. Avaliando modelo...
+   -> Silhoueta: 0.0160
+   -> Diversidade: 0.9150
+   -> Coerência (c_v): 0.5906
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank2
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank2
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank2
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank5
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank5
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank5
+
+============================================================
+[7/12] Treinando config: Clusters=20 | UMAP=100
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+
+============================================================
+-> Este modelo será salvo nas seguintes pastas:
+   - best_diversity_rank3
+   - best_combined_sdc_rank3
+   - best_combined_sc_rank4
+============================================================
+2. Avaliando modelo...
+   -> Silhoueta: 0.0177
+   -> Diversidade: 0.9100
+   -> Coerência (c_v): 0.5866
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank3
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank3
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank3
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank3
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank3
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank3
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank4
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank4
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank4
+
+============================================================
+[8/12] Treinando config: Clusters=12 | UMAP=30
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+
+============================================================
+-> Este modelo será salvo nas seguintes pastas:
+   - best_diversity_rank4
+   - best_coherence_rank2
+   - best_combined_sdc_rank1
+   - best_combined_sc_rank1
+============================================================
+2. Avaliando modelo...
+   -> Silhoueta: 0.0170
+   -> Diversidade: 0.9083
+   -> Coerência (c_v): 0.6181
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank4
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank4
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank4
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank2
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank2
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank2
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank1
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank1
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank1
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank1
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank1
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank1
+
+============================================================
+[9/12] Treinando config: Clusters=15 | UMAP=30
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+
+============================================================
+-> Este modelo será salvo nas seguintes pastas:
+   - best_diversity_rank5
+   - best_coherence_rank4
+   - best_combined_sdc_rank4
+   - best_combined_sc_rank3
+============================================================
+2. Avaliando modelo...
+   -> Silhoueta: 0.0167
+   -> Diversidade: 0.9000
+   -> Coerência (c_v): 0.5999
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank5
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank5
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_diversity_rank5
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank4
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank4
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank4
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank4
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank4
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sdc_rank4
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank3
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank3
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_combined_sc_rank3
+
+============================================================
+[10/12] Treinando config: Clusters=22 | UMAP=50
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+
+============================================================
+-> Este modelo será salvo nas seguintes pastas:
+   - best_coherence_rank1
+============================================================
+2. Avaliando modelo...
+   -> Silhoueta: 0.0123
+   -> Diversidade: 0.8864
+   -> Coerência (c_v): 0.6230
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank1
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank1
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank1
+
+============================================================
+[11/12] Treinando config: Clusters=25 | UMAP=50
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+
+============================================================
+-> Este modelo será salvo nas seguintes pastas:
+   - best_coherence_rank3
+============================================================
+2. Avaliando modelo...
+   -> Silhoueta: 0.0129
+   -> Diversidade: 0.8760
+   -> Coerência (c_v): 0.6179
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank3
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank3
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank3
+
+============================================================
+[12/12] Treinando config: Clusters=25 | UMAP=30
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+
+============================================================
+-> Este modelo será salvo nas seguintes pastas:
+   - best_coherence_rank5
+============================================================
+2. Avaliando modelo...
+   -> Silhoueta: 0.0092
+   -> Diversidade: 0.8560
+   -> Coerência (c_v): 0.5965
+3. Exportando Dicionário de Tópicos Enriquecido...
+   -> Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank5
+4. Gerando Visualizações HTML...
+   -> Gerando Árvore Hierárquica...
+   -> Visualizações salvas em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank5
+   [✓] Salvo em: /home/mateus/reddit/reports/topic_modeling11/best_coherence_rank5
+
+Processo de treinamento e exportação dos melhores modelos concluído!

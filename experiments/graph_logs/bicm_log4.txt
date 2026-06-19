@@ -1,0 +1,59 @@
+Quantidade de autores na semente: 8,188
+Subreddits na rede expandida: 1,488
+Autores conectores mantidos: 583
+Edgelist: 2,760 pares
+============================================================
+DIAGNÓSTICO DA REDE BIPARTIDA
+============================================================
+
+Nós: 583 usuários | 1488 subreddits
+Arestas: 2,760
+Densidade: 0.003182
+
+Usuários por subreddit:
+count    1488.000000
+mean        1.854839
+std         2.944755
+min         1.000000
+25%         1.000000
+50%         1.000000
+75%         2.000000
+max        35.000000
+
+Subreddits por usuário:
+count    583.000000
+mean       4.734134
+std        3.265405
+min        3.000000
+25%        3.000000
+50%        4.000000
+75%        5.000000
+max       27.000000
+
+Calculando overlaps entre pares de subreddits...
+Pares com overlap > 0: 198 / 19,900 (1.0%)
+Distribuição dos overlaps (onde > 0):
+count    198.000000
+mean       1.030303
+std        0.244930
+min        1.000000
+25%        1.000000
+50%        1.000000
+75%        1.000000
+max        4.000000
+
+Overlap >= 2: 4 pares
+Overlap >= 5: 0 pares
+Overlap >= 10: 0 pares
+============================================================
+solve_bicm has been deprecated, calling solve_tool instead
+max rows error = 1.5347723092418164e-11
+max columns error = 2.786961772471841e-10
+total error = 8.008431695571971e-10
+Solver converged.
+No V-motifs will be validated. Try increasing alpha
+
+Arestas validadas (BiCM + FDR α=0.1): 0
+Grafo: 0 nós, 0 arestas
+
+Grafo salvo com sucesso em: /home/mateus/reddit/data/processed/graph_bicm.graphml

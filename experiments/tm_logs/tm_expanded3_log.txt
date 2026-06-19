@@ -1,0 +1,187 @@
+Carregando configurações de: /home/mateus/reddit/configs/config_tm_expanded3.yaml
+1. Carregando posts...
+   -> 336 subreddits carregados
+   -> Dataset completo: 87630 posts
+   -> Textos ÚNICOS para treinamento: 85520
+2. Gerando embeddings...
+   -> Dispositivo: cuda
+   -> Cache salva em: /home/mateus/reddit/artifacts/embeddings/embeddings_topic_modeling_expanded_all_mini.npy
+Grid search BERTopic...
+   -> 27 combinações
+
+[1/27] {'n_clusters': 5, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0205
+   -> Diversidade: 0.8400
+   -> Coerência (c_v): 0.5083
+
+[2/27] {'n_clusters': 5, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0183
+   -> Diversidade: 0.8600
+   -> Coerência (c_v): 0.5368
+
+[3/27] {'n_clusters': 5, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0183
+   -> Diversidade: 0.8800
+   -> Coerência (c_v): 0.5476
+
+[4/27] {'n_clusters': 7, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0177
+   -> Diversidade: 0.8571
+   -> Coerência (c_v): 0.5521
+
+[5/27] {'n_clusters': 7, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0155
+   -> Diversidade: 0.8000
+   -> Coerência (c_v): 0.5234
+
+[6/27] {'n_clusters': 7, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0152
+   -> Diversidade: 0.8714
+   -> Coerência (c_v): 0.5341
+
+[7/27] {'n_clusters': 10, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0159
+   -> Diversidade: 0.9000
+   -> Coerência (c_v): 0.5527
+
+[8/27] {'n_clusters': 10, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0142
+   -> Diversidade: 0.8800
+   -> Coerência (c_v): 0.5350
+
+[9/27] {'n_clusters': 10, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0184
+   -> Diversidade: 0.8600
+   -> Coerência (c_v): 0.5679
+
+[10/27] {'n_clusters': 12, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0151
+   -> Diversidade: 0.8917
+   -> Coerência (c_v): 0.5842
+
+[11/27] {'n_clusters': 12, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0058
+   -> Diversidade: 0.8333
+   -> Coerência (c_v): 0.5413
+
+[12/27] {'n_clusters': 12, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0143
+   -> Diversidade: 0.8583
+   -> Coerência (c_v): 0.5609
+
+[13/27] {'n_clusters': 15, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0117
+   -> Diversidade: 0.8667
+   -> Coerência (c_v): 0.5887
+
+[14/27] {'n_clusters': 15, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0095
+   -> Diversidade: 0.8800
+   -> Coerência (c_v): 0.5739
+
+[15/27] {'n_clusters': 15, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0076
+   -> Diversidade: 0.8400
+   -> Coerência (c_v): 0.5997
+
+[16/27] {'n_clusters': 18, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0068
+   -> Diversidade: 0.8667
+   -> Coerência (c_v): 0.5948
+
+[17/27] {'n_clusters': 18, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0082
+   -> Diversidade: 0.8611
+   -> Coerência (c_v): 0.5806
+
+[18/27] {'n_clusters': 18, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0070
+   -> Diversidade: 0.8444
+   -> Coerência (c_v): 0.6024
+
+[19/27] {'n_clusters': 20, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[20/27] {'n_clusters': 20, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[21/27] {'n_clusters': 20, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[22/27] {'n_clusters': 22, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[23/27] {'n_clusters': 22, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[24/27] {'n_clusters': 22, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[25/27] {'n_clusters': 25, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[26/27] {'n_clusters': 25, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+[27/27] {'n_clusters': 25, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+   -> Falhou: [Errno 28] No space left on device
+
+Filtro Inteligente: 13 treinamentos cobrirão 25 rankings.
+
+============================================================
+[1/13] Processando config: Clusters=5 | UMAP=30
+   -> Carregando modelo rápido do cache...
+
+============================================================
+-> Este modelo será salvo nas seguintes pastas:
+   - best_silhouette_rank1
+============================================================
+2. Avaliando modelo...
+   -> Silhoueta: 0.0205
+   -> Diversidade: 0.8400
+   -> Coerência (c_v): 0.5083

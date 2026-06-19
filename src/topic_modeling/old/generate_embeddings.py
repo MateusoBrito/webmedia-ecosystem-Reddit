@@ -2,6 +2,7 @@ from pathlib import Path
 import numpy as np
 import torch
 import argparse
+import networkx as nx
 from sentence_transformers import SentenceTransformer
 from src.utils.data_loader import load_preprocessed_data
 
@@ -12,7 +13,7 @@ def run_embeddings(
     batch_size=128
 ):
     if root is None:
-        root = Path(__file__).resolve().parents[1]
+        root = Path(__file__).resolve().parents[3]
     
     dir_path = root / "artifacts" / "embeddings"
     if output_path is None:
@@ -23,8 +24,22 @@ def run_embeddings(
     if output_path.exists():
         print("Embeddings já existem. Pulando execução.")
         return
+    
+    graph_path = root / "artifacts" / "graph" / "network_disparity.graphml"
+    print(f"Carregando grafo de {graph_path}...")
+    try:
+        G = nx.read_graphml(graph_path)
+        valid_subreddits = set(G.nodes())
+        print(f"-> {len(valid_subreddits)} subreddits válidos encontrados na topologia.")
+    except FileNotFoundError:
+        print(f"Erro: O grafo não foi encontrado no caminho {graph_path}.")
+        print("Execute a filtragem estatística antes de gerar os embeddings.")
+        return
 
     df = load_preprocessed_data()
+    df = df[df['subreddit'].isin(valid_subreddits)].copy()
+    print(f"-> Total de posts APÓS o filtro do grafo: {len(df)}")
+
     sentences = df["text_clean"].tolist()
 
     device = "cuda" if torch.cuda.is_available() else "cpu"

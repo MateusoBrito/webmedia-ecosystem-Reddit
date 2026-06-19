@@ -1,0 +1,16 @@
+# config.yaml
+
+paths:
+  stopwords: "data/processed/stopwords.txt"
+  cache_embeddings: "artifacts/embeddings/embeddings_topic_modeling_expanded_all_mini.npy"
+  dir_reports: "reports/topic_modeling9"
+  top_n: 5
+
+model:
+  embedding_name: "all-MiniLM-L6-v2"
+
+grid_search:
+  n_clusters: [5, 7 ,10, 12, 15, 18, 20, 22, 25]
+  
+  n_neighbors: [30, 50, 100]
+  n_components: [5]

@@ -3,6 +3,7 @@ from pathlib import Path
 from itertools import product
 import pandas as pd
 import numpy as np
+#import joblib
 
 from src.topic_modeling.model import train_topic_model, evaluate_model
 
@@ -17,6 +18,9 @@ def grid_search(
 
     output_dir.mkdir(parents=True, exist_ok=True)
     out_path = output_dir / "grid_search_results.csv"
+
+    #temp_dir = output_dir / "temp_models_cache"
+    #temp_dir.mkdir(parents=True, exist_ok=True)
 
     keys = list(param_grid.keys())
     combinations = list(product(*param_grid.values()))
@@ -50,6 +54,10 @@ def grid_search(
                 n_neighbors=params["n_neighbors"],
                 n_components=params["n_components"],
             )
+
+            #model_id = f"c{params['n_clusters']}_n{params['n_neighbors']}_comp{params['n_components']}"
+            #arquivo_cache = temp_dir / f"{model_id}.joblib"
+            #joblib.dump((topic_model, topics), arquivo_cache)
 
             metrics = evaluate_model(topic_model, topics, documents, embeddings)
 

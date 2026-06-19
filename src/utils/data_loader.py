@@ -35,7 +35,7 @@ def load_centroid_data(
     """
     Carrega os centroides dos subreddits a partir do arquivo Parquet.
     """
-    file_path = ARTIFACTS_EMBEDDINGS / "subreddit_centroids.parquet"
+    file_path = ARTIFACTS_EMBEDDINGS / "centroids_subreddits.parquet"
     
     if not file_path.exists():
         raise FileNotFoundError(
@@ -75,6 +75,7 @@ def load_raw_data(
                 print(f"Erro JSON em {file_path}: {e}")
 
     df = pd.DataFrame(rows)
+    df = df.drop_duplicates(subset=['id'])
 
     if only_valid_ids:
         ids_validos = pd.read_parquet(
@@ -87,6 +88,7 @@ def load_raw_data(
         df = df[columns]
     
     print(f"Posts carregados: {len(df)}")
+    print(f"Quantidade de subreddts: {len(df['subreddit'].unique())}")
 
     return df
 

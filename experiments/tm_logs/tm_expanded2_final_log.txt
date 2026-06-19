@@ -1,0 +1,133 @@
+Carregando configurações de: /home/mateus/reddit/configs/config_tm_expanded2.yaml
+1. Carregando posts...
+   -> 427 subreddits carregados
+   -> Dataset completo: 108978 posts
+   -> Textos ÚNICOS para treinamento: 105447
+2. Gerando embeddings...
+   -> Carregando da cache: /home/mateus/reddit/artifacts/embeddings/embeddings_topic_modeling_expanded_all_mini.npy
+Grid search BERTopic...
+   -> 27 combinações
+   -> 11 combinações já concluídas, retomando...
+[1/27] Pulando {'n_clusters': 5, 'n_neighbors': 30, 'n_components': 5}
+[2/27] Pulando {'n_clusters': 5, 'n_neighbors': 50, 'n_components': 5}
+[3/27] Pulando {'n_clusters': 5, 'n_neighbors': 100, 'n_components': 5}
+[4/27] Pulando {'n_clusters': 7, 'n_neighbors': 30, 'n_components': 5}
+[5/27] Pulando {'n_clusters': 7, 'n_neighbors': 50, 'n_components': 5}
+[6/27] Pulando {'n_clusters': 7, 'n_neighbors': 100, 'n_components': 5}
+[7/27] Pulando {'n_clusters': 10, 'n_neighbors': 30, 'n_components': 5}
+[8/27] Pulando {'n_clusters': 10, 'n_neighbors': 50, 'n_components': 5}
+[9/27] Pulando {'n_clusters': 10, 'n_neighbors': 100, 'n_components': 5}
+[10/27] Pulando {'n_clusters': 12, 'n_neighbors': 30, 'n_components': 5}
+[11/27] Pulando {'n_clusters': 12, 'n_neighbors': 50, 'n_components': 5}
+
+[12/27] {'n_clusters': 12, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0134
+   -> Diversidade: 0.8917
+   -> Coerência (c_v): 0.5426
+
+[13/27] {'n_clusters': 15, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0111
+   -> Diversidade: 0.8733
+   -> Coerência (c_v): 0.5650
+
+[14/27] {'n_clusters': 15, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0097
+   -> Diversidade: 0.8600
+   -> Coerência (c_v): 0.5927
+
+[15/27] {'n_clusters': 15, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0075
+   -> Diversidade: 0.8800
+   -> Coerência (c_v): 0.5757
+
+[16/27] {'n_clusters': 18, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0113
+   -> Diversidade: 0.8889
+   -> Coerência (c_v): 0.6117
+
+[17/27] {'n_clusters': 18, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0090
+   -> Diversidade: 0.8833
+   -> Coerência (c_v): 0.5971
+
+[18/27] {'n_clusters': 18, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0086
+   -> Diversidade: 0.8667
+   -> Coerência (c_v): 0.5841
+
+[19/27] {'n_clusters': 20, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0081
+   -> Diversidade: 0.8700
+   -> Coerência (c_v): 0.6059
+
+[20/27] {'n_clusters': 20, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0100
+   -> Diversidade: 0.8750
+   -> Coerência (c_v): 0.6023
+
+[21/27] {'n_clusters': 20, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0101
+   -> Diversidade: 0.8900
+   -> Coerência (c_v): 0.5568
+
+[22/27] {'n_clusters': 22, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0097
+   -> Diversidade: 0.8727
+   -> Coerência (c_v): 0.6114
+
+[23/27] {'n_clusters': 22, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0091
+   -> Diversidade: 0.8773
+   -> Coerência (c_v): 0.5780
+
+[24/27] {'n_clusters': 22, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0106
+   -> Diversidade: 0.8773
+   -> Coerência (c_v): 0.5858
+
+[25/27] {'n_clusters': 25, 'n_neighbors': 30, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0085
+   -> Diversidade: 0.8840
+   -> Coerência (c_v): 0.5992
+
+[26/27] {'n_clusters': 25, 'n_neighbors': 50, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0047
+   -> Diversidade: 0.8560
+   -> Coerência (c_v): 0.5798
+
+[27/27] {'n_clusters': 25, 'n_neighbors': 100, 'n_components': 5}
+1. Treinando BERTopic (UMAP + KMeans + c-TF-IDF)...
+2. Avaliando modelo...
+   -> Silhoueta: 0.0109
+   -> Diversidade: 0.8720
+   -> Coerência (c_v): 0.6073

@@ -137,7 +137,7 @@ def export_visualizations(topic_model: BERTopic, output_dir: Path):
 
 
 def main():
-    DIR_REPORTS = ROOT / "reports" / "topic_modeling"
+    DIR_REPORTS = ROOT / "reports" / "topic_modeling_sub"
     
     documents, centroids_matrix, subreddit_names = prepare_data()
     topic_model, topics = train_topic_model(documents, centroids_matrix)

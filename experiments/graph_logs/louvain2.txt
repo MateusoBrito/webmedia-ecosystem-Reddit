@@ -1,0 +1,16 @@
+==================================================
+Carregando o grafo de:
+/home/mateus/reddit/artifacts/graph/network_disparity.graphml
+Grafo carregado com sucesso: 4873 nós e 11961 arestas.
+
+Executando clusterização de comunidades (Louvain)...
+Com resolução 0.5, a rede foi particionada em 471 macro-comunidades válidas.
+
+Calculando a disposição espacial dos nós (Spring Layout)...
+Aguarde, isso pode levar de 1 a 3 minutos para redes grandes...
+
+Desenhando e renderizando o gráfico de alta resolução...
+==================================================
+Gráfico gerado com sucesso em:
+/home/mateus/reddit/reports/graph_analysis/louvain_communities.png
+==================================================
